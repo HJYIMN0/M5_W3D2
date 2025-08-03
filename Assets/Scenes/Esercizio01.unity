@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7081a9f7d25f8594b83da5580e8cf2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timer: 2
+  _timer: 1
   _playerColor: {fileID: 213548062}
 --- !u!4 &1064804374
 Transform:

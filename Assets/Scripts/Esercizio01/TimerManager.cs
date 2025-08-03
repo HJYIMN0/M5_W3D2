@@ -14,6 +14,7 @@ public class TimerManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(_timer);
+            _onTimerChange = null;
             _onTimerChange += _playerColor.ChangeColor;
             _onTimerChange.Invoke(); 
         }
