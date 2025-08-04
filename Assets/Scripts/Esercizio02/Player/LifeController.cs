@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
-
+using System;
 public class LifeController : MonoBehaviour
 {
     public int maxHp = 100;
     public int hp;
     public bool _maxHpOnStart = true;
 
-    public UnityEvent<int, int> _onHpChanged;
+    [SerializeField] private GameObject _ui;
+
+    public Action<int, int> _onHpChanged;
 
     private void Start()
     {
         if (_maxHpOnStart) hp = maxHp;
 
+        _onHpChanged += (currentHp, maxHp) => _ui.GetComponent<Ui_HPBarManager>().ChangeHp(currentHp, maxHp);
         _onHpChanged?.Invoke(hp, maxHp);
     }
 

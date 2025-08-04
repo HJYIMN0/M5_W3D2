@@ -14,8 +14,9 @@ public class SO_HealingPotion : SO_Item
         if (life != null) 
         {
             life.Heal(healingPower);
-            PlayerInventory inventory = user.GetComponent<PlayerInventory>();
-            inventory.inventoryItems.Remove(this);
+            PlayerInventory.Instance.inventoryItems.Remove(this);
+            //PlayerInventory inventory = user.GetComponent<PlayerInventory>();
+            //inventory.inventoryItems.Remove(this);
         }
     }
 }

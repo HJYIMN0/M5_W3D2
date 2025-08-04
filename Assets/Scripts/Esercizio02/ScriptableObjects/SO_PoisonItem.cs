@@ -15,8 +15,9 @@ public class SO_PoisonItem : SO_Item
         if (life != null)
         { 
             life.TakeDamage(dmg);
-            PlayerInventory inventory = user.GetComponent<PlayerInventory>();
-            inventory.inventoryItems.Remove(this);
+            PlayerInventory.Instance.inventoryItems.Remove(this);
+            //PlayerInventory inventory = user.GetComponent<PlayerInventory>();
+            //inventory.inventoryItems.Remove(this);
         }
     }
 }

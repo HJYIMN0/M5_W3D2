@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
         {
             _dir = new Vector3(h, 0, v).normalized;
         }
+        else _dir = Vector3.zero;
        
 
     }
